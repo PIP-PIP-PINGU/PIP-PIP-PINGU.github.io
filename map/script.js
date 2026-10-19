@@ -65,9 +65,9 @@ function drawMap() {
     });
 
     ctx.fillStyle = '#888'; ctx.font = 'bold 11px monospace'; ctx.textAlign = 'center';
-    ctx.fillText('N (-Z)', w / 2, 15); ctx.fillText('S (+Z)', w / 2, h - 8);
-    ctx.textAlign = 'left'; ctx.fillText('W (-X)', 8, h / 2 - 4);
-    ctx.textAlign = 'right'; ctx.fillText('E (+X)', w - 8, h / 2 - 4); ctx.textAlign = 'left';
+    ctx.fillText('N (-Z)', cx, 15); ctx.fillText('S (+Z)', cx, h - 8);
+    ctx.textAlign = 'left'; ctx.fillText('W (-X)', 8, cy - 4);
+    ctx.textAlign = 'right'; ctx.fillText('E (+X)', w - 8, cy - 4); ctx.textAlign = 'left';
 }
 
 

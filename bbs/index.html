@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掲示板 | PIP-PIP-PINGU</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="/matcha/">PIP-PIP-PINGU</a></div>
+        <button class="hamburger-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        <ul id="navMenu">
+            <li><a href="/map/">座標一覧</a></li>
+            <li><a href="/bbs/">掲示板</a></li>
+            <li><a href="/farm/" class="nav-disabled">装置一覧</a></li>
+            <li><a href="/trade/" class="nav-disabled">取引検索</a></li>
+            <li><a href="/storage/" class="nav-disabled">倉庫検索</a></li>
+        </ul>
+    </nav>
+    <div class="bbs-wrapper">
+        <div class="bbs-header-row">
+            <h2 class="bbs-title">伝言板</h2>
+            <button class="open-modal-btn" onclick="openModal()">＋ 伝言を書く</button>
+        </div>
+        <div id="corkboardContainer" class="corkboard"></div>
+    </div>
+    <div id="formModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-window">
+            <button class="close-modal-btn" onclick="closeModal()">&times;</button>
+            <form id="bbsForm">
+                <div class="form-group">
+                    <label for="postTo">宛先</label>
+                    <input type="text" id="postTo" required>
+                </div>
+                <div class="form-group">
+                    <label for="postAuthor">書いた人</label>
+                    <input type="text" id="postAuthor" required>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">内容</label>
+                    <textarea id="postContent" rows="4" required></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="bbs-submit-btn">ボードに貼る</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 PIP-PIP-PINGU</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

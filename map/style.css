@@ -2,19 +2,20 @@ h1 { font-size: 2rem; font-weight: 900; text-align: center; margin: 40px 0; colo
 .map-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 25px; background: var(--bg-card-section); padding: 20px; border: 1px solid var(--border-nav); position: relative; }
 canvas { background: #111111; border: 2px solid var(--text-main); max-width: 100%; cursor: grab; }
 .info-popup { margin-top: 15px; padding: 15px; background: var(--bg-main); border-left: 4px solid var(--accent); border-top: 1px solid var(--border-nav); border-right: 1px solid var(--border-nav); border-bottom: 1px solid var(--border-nav); width: 95%; display: none; font-size: 13px; font-weight: bold; }
-.controls { display: flex; gap: 12px; margin-bottom: 25px; }
-input, select { border: 1px solid var(--border-nav); background: var(--bg-card-section); color: var(--text-main); font-weight: bold; }
+.controls { display: flex; margin: 0 auto 25px auto; max-width: 600px; width: 100%; border: 1px solid var(--border-nav); border-radius: 6px; overflow: hidden; }
+input, select { background: var(--bg-card-section); color: var(--text-main); font-weight: bold; padding: 10px 16px; font-size: 14px;height: 42px; border: none; box-sizing: border-box; outline: none; }
+select { border-right: 1px solid var(--border-nav); cursor: pointer; padding-right: 32px; }
 input { flex-grow: 1; }
-.location-list { list-style: none; padding: 0; margin: 0; }
-.location-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border-nav); font-size: 13px; cursor: pointer; }
+.location-list { list-style: none; padding: 0; margin: 0 auto; max-width: 750px; width: 100%; }
+.location-item { display: flex; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border-nav); font-size: 14px; cursor: pointer; }
 .location-item:hover { background: var(--bg-card-section); }
-.location-item.selected { background: var(--bg-card-section); border-left: 4px solid var(--accent); padding-left: 4px; }
+.location-item.selected { background: var(--bg-card-section); border-left: 4px solid var(--accent); padding-left: 12px; }
 .badge { font-size: 10px; padding: 3px 6px; border-radius: 4px; margin-right: 10px; min-width: 65px; text-align: center; font-weight: bold; color: #ffffff; }
 .badge.structure { background: #1a73e8; }
 .badge.biome { background: var(--sub-title); }
 .badge.base { background: var(--accent); }
-.name { font-weight: bold; flex-grow: 1; color: var(--text-main); }
-.coords { font-family: monospace; color: var(--accent); background: var(--bg-card-section); border: 1px solid var(--border-nav); padding: 3px 6px; border-radius: 4px; margin-right: 10px; font-weight: bold; }
+.name { font-weight: bold; flex-grow: 0; color: var(--text-main); margin-right: 12px; }
+.coords { font-family: monospace; color: var(--accent); background: var(--bg-card-section); border: 1px solid var(--border-nav); padding: 3px 6px; border-radius: 4px; font-weight: bold; margin-left: auto; margin-right: 10px; }
 .memo { color: var(--text-muted); font-size: 12px; }
 .map-inner-controls { position: absolute; right: 30px; bottom: 55px; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
 .slider-box, .zoom-box { pointer-events: auto; background: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 6px; border: 1px solid var(--border-nav); display: flex; gap: 6px; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
