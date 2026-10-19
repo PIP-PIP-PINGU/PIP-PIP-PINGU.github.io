@@ -1,0 +1,32 @@
+:root { --bg-main: #FFFFFF; --bg-card-section: #FEFCF6; --text-main: #3A1F08; --text-muted: #64748b; --sub-title: #1E9432; --bg-footer: #1E948A; --border-nav: #C9C9C9; --accent: #F07714; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif; }
+body { background-color: var(--bg-main); color: var(--text-main); -webkit-font-smoothing: antialiased; }
+nav { background: #FFFFFF; padding: 30px 50px; display: flex; justify-content: space-between; align-items: center; position: absolute; width: 100%; top: 0; left: 0; z-index: 100; border-bottom: 1px solid var(--border-nav); }
+nav .logo { font-size: 1.6rem; font-weight: 900; color: var(--text-main); letter-spacing: 3px; }
+nav .logo a { color: inherit; text-decoration: none; display: inline-block; }
+nav ul { display: flex; list-style: none; gap: 40px; }
+nav ul a { color: var(--text-main); text-decoration: none; font-size: 0.9rem; font-weight: bold; letter-spacing: 1px; transition: color 0.3s; }
+nav ul a:hover { color: var(--accent); }
+nav ul a.nav-disabled { color: var(--border-nav); pointer-events: none; }
+.hero-section { position: relative; height: 95vh; overflow: hidden; display: flex; align-items: flex-end; padding: 0 50px 100px 50px; }
+.slider-wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.hero-text { position: relative; z-index: 2; }
+.hero-text h1 { font-size: 6rem; font-weight: 900; color: #ffffff; text-shadow: 0 10px 30px rgba(58,31,8,0.3); letter-spacing: 4px; }
+.slide-img { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; animation: sliderAnime 12s infinite; }
+.img1 { background-image: linear-gradient(to bottom, rgba(255,255,255,0) 60%, var(--bg-main) 100%), url('images/pingu-base1.jpg'); animation-delay: 0s; }
+.img2 { background-image: linear-gradient(to bottom, rgba(255,255,255,0) 60%, var(--bg-main) 100%), url('images/pingu-base2.jpg'); animation-delay: 4s; }
+.img3 { background-image: linear-gradient(to bottom, rgba(255,255,255,0) 60%, var(--bg-main) 100%), url('images/pingu-base3.jpg'); animation-delay: 8s; }
+@keyframes sliderAnime { 0% { opacity: 0; } 8% { opacity: 1; } 33% { opacity: 1; } 41% { opacity: 0; } 100% { opacity: 0; } }
+.main-container { max-width: 1200px; margin: 0 auto; padding: 100px 50px; display: flex; flex-direction: column; gap: 20px; }
+.link-row { display: flex; align-items: center; padding: 35px 40px; background-color: var(--bg-card-section); border-left: 6px solid var(--sub-title); text-decoration: none; color: var(--text-main); }
+.link-row:hover { border-left-color: var(--accent); }
+.dev-row { border-left-color: var(--border-nav); opacity: 0.6; cursor: not-allowed; }
+.dev-row:hover { border-left-color: var(--border-nav); }
+.row-num { font-size: 1.2rem; font-weight: 900; width: 60px; color: var(--border-nav); }
+.row-content { flex: 1; }
+.row-content h2 { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; margin-bottom: 5px; }
+.row-content p { font-size: 0.85rem; color: var(--text-muted); }
+.row-status { font-size: 0.8rem; font-weight: 900; letter-spacing: 1px; padding: 6px 16px; border-radius: 4px; }
+.status-dev { background-color: rgba(201,201,201,0.2); color: var(--text-muted); }
+footer { text-align: center; padding: 60px; background: var(--bg-footer); }
+.footer-content p { font-size: 0.75rem; color: #ffffff; font-weight: bold; letter-spacing: 2px; }
