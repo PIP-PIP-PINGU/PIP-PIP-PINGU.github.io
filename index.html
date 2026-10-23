@@ -4,89 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>緊急システムメンテナンスのお知らせ | PIP-PIP-PINGU</title>
-    <style>
-        html, body {
-            height: 100%; /* 画面全体の高さを100%にする */
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-        }
-
-        body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            color: #333333;
-            line-height: 1.7;
-            
-            /* 画面の上下左右の真ん中に要素を配置する設定 */
-            display: flex;
-            justify-content: center; /* 左右の中央揃え */
-            align-items: center;     /* 上下の中央揃え */
-        }
-
-        .container {
-            max-width: 680px;
-            width: 100%;
-            padding: 20px; /* スマホなどの画面端の余白 */
-            box-sizing: border-box;
-        }
-
-        h1 {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #111111;
-        }
-
-        .notice-box {
-            border: 1px solid #dddddd;
-            padding: 25px 30px;
-            background-color: #ffffff;
-            text-align: center;
-        }
-
-        p {
-            margin: 0 0 16px 0;
-            font-size: 13.5px;
-            word-wrap: break-word;
-            text-align: center;
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-
-        .highlight-text {
-            font-weight: bold;
-            font-size: 14.5px;
-            margin-top: 20px;
-            color: #000000;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- タイトル -->
+    <div class="maintenance-box">
         <h1>緊急システムメンテナンスのお知らせ</h1>
+        
+        <p>ただいまシステムに不具合が発生しているため、10月23日15時25分より緊急のメンテナンスを実施しております。メンテナンス期間中は、すべての機能およびサービスが一時的にご利用いただけなくなります。</p>
+        
+        <p>現在のところ、作業の完了および復旧のめどは未定となっております。進捗が確認でき次第、改めてご案内いたします。</p>
 
-        <!-- 案内枠 -->
-        <div class="notice-box">
-            <p>平素よりPIP-PIP-PINGUをご利用いただき誠にありがとうございます。</p>
-            
-            <p>PIP-PIP-PINGUが利用している基盤ソフトウェア「PHP」について、セキュリティ上の問題（脆弱性）<br>
-            が確認されたとの情報が公表されました。</p>
-            
-            <p>これを受け、サービスを安全にご利用いただくため、下記の日程で緊急システムメンテナンス<br>
-            を実施いたします。</p>
-            
-            <p>メンテナンス期間中は、一部のお手続きやページの閲覧や機能に制限が生じます。</p>
-            
-            <p>お客様にはご不便・ご迷惑をおかけいたしますことを深くお詫び申し上げます。</p>
-            
-            <!-- 日時強調部分 -->
-            <p class="highlight-text">2026年10月22日（木）02:00より緊急メンテナンスを実施</p>
-        </div>
+        <p class="footer-msg">ご利用の皆様には大変なご迷惑とご不便をおかけいたしますことを、深くお詫び申し上げます。復旧まで今しばらくお待ちいただけますようお願い申し上げます。</p>
     </div>
 
 </body>
